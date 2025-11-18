@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Books - Read Books Online</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">📚 Free Books</a>
+                <div class="search-container">
+                    <input type="text" class="search-box" placeholder="Search books, authors, genres..." id="searchInput">
+                    <button class="search-btn" onclick="searchBooks()">Search</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="hero">
+                <h1>Read Thousands of Books for Free</h1>
+                <p><b>No registration required. Start reading immediately!</b></p>
+            </section>
+
+            <div class="filters">
+                <button class="filter-btn active" onclick="filterBooks('all')"><b>All Books</b></button>
+                <button class="filter-btn" onclick="filterBooks('Sanatan Literature')"><b>Sanatan Literature</b></button>
+                <button class="filter-btn" onclick="filterBooks('fiction')"><b>Fiction</b></button>
+                <button class="filter-btn" onclick="filterBooks('mystery')"><b>Mystery</b></button>
+                <button class="filter-btn" onclick="filterBooks('romance')"><b>Romance</b></button>
+                <button class="filter-btn" onclick="filterBooks('sci-fi')"><b>Sci-Fi</b></button>
+                <button class="filter-btn" onclick="filterBooks('classic')"><b>Classics</b></button>
+                
+            </div>
+
+            <div class="books-grid" id="booksGrid">
+            </div>
+        </div>
+    </main>
+
+    <div class="reader-modal" id="readerModal">
+        <div class="reader-content">
+            <div class="reader-header">
+                <h2 id="readerTitle">Book Title</h2>
+                <button class="close-btn" onclick="closeReader()">&times;</button>
+            </div>
+            <div class="reader-body" id="readerBody">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
